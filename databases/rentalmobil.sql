@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 07, 2020 at 07:58 PM
+-- Generation Time: Mar 31, 2020 at 09:03 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -36,7 +36,7 @@ CREATE TABLE `mobil` (
   `warna` varchar(20) NOT NULL,
   `tahun` varchar(4) NOT NULL,
   `harga` int(11) NOT NULL,
-  `status` varchar(50) NOT NULL,
+  `status` varchar(50) NOT NULL COMMENT '0. disewa , 1. Tersedia',
   `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -132,7 +132,9 @@ INSERT INTO `user` (`id_user`, `nama`, `email`, `password`, `alamat`, `gender`, 
 (9, 'risti', 'risti@gmail.com', 'f4e4ed60089aa5d06938cb7ace645b4b', 'malang', 'Perempuan', '087666782533', '895778329828', '13.jpg', '23.jpg', 2, 1),
 (10, 'farah', 'farah@gmail.com', '9b0f4d720720fd55436ac7f07ac8a840', 'jember', 'Perempuan', '0896896897', '90098978989', '14.jpg', '24.jpg', 2, 1),
 (13, 'dimas', 'dimas@gmail.com', '7d49e40f4b3d8f68c19406a58303f826', 'Malang', 'Laki-Laki', '287612891', '8979790', 'KTP-15445232627.png', 'KK7.PNG', 2, 1),
-(14, 'Ernold', 'ernold@gmail.com', '71348276d1229ccb335ebedc677b3ed1', 'Magetan', 'Laki-Laki', '899709709', '9070979', 'KTP-15445232628.png', 'KK8.PNG', 2, 0);
+(14, 'Ernold', 'ernold@gmail.com', '71348276d1229ccb335ebedc677b3ed1', 'Magetan', 'Laki-Laki', '899709709', '9070979', 'KTP-15445232628.png', 'KK8.PNG', 2, 0),
+(15, 'wildanb', 'wildanb@gmail.com', 'af6b3aa8c3fcd651674359f500814679', 'malang', 'Laki-Laki', '876896986', '8969869698698', 'KTP-15445232629.png', 'KTP-154452326210.png', 2, 1),
+(16, 'ui', 'ui@gmail.com', '7d5c009e4eb8bbc78647caeca308e61b', 'ui', 'Laki-Laki', '9021789127', '89789790', 'Screenshot_2.jpg', 'Screenshot_21.jpg', 2, 1);
 
 --
 -- Indexes for dumped tables
@@ -191,7 +193,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
